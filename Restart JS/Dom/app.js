@@ -4,6 +4,7 @@ const openNav = document.querySelector(".open")
 const closeNav = document.getElementById("close")
 const sideNavBar = document.querySelector(".sidenav")
 const para = document.querySelectorAll("p");
+//const forms = document.querySelector(".events")
 openNav.addEventListener('click', toggleSideNavBar);
 closeNav.addEventListener('click', toggleSideNavBar);
 
@@ -55,3 +56,18 @@ function eleHover(element) {
 function eleOut(item) {
     item.style.backgroundColor = "#DEE7E7"
 }
+
+// function redirForm() {
+//     window.location.href = "./#"
+// }
+
+window.transitionToPage = function(href) {
+    document.querySelector('body').style.opacity = 0
+    setTimeout(function() { 
+        window.location.href = href
+    }, 500)
+}
+
+document.addEventListener('DOMContentLoaded', function(event) {
+    document.querySelector('body').style.opacity = 1
+})
