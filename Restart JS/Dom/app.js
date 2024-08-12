@@ -8,9 +8,9 @@ const para = document.querySelectorAll("p");
 openNav.addEventListener('click', toggleSideNavBar);
 closeNav.addEventListener('click', toggleSideNavBar);
 
-for(paras of para ) {
-    paras.textContent = "The values of P changed Using for of loop"
-}
+// for(paras of para ) {
+//     paras.textContent = "The values of P changed Using for of loop"
+// }
 
 let isDarkTheme = false;
 
@@ -62,6 +62,7 @@ function eleOut(item) {
 // }
 
 window.transitionToPage = function(href) {
+    //window.location.href = href
     document.querySelector('body').style.opacity = 0
     setTimeout(function() { 
         window.location.href = href
@@ -71,3 +72,15 @@ window.transitionToPage = function(href) {
 document.addEventListener('DOMContentLoaded', function(event) {
     document.querySelector('body').style.opacity = 1
 })
+
+// to print Tables 
+let promt = prompt("Number you need to multiple")
+let num =parseInt(promt );
+
+function multi() {
+    for(let i=num;  i<=num*10; i=i+num){
+        console.log(`Multi of ${num} is : ${i}`)
+    }
+}
+
+multi()

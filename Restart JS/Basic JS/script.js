@@ -261,3 +261,243 @@ let objects = [
 
 let setObj = [...new Map(objects.map(item => [item.name, item])).values()];
 console.log(setObj)
+
+
+//Return Keyword
+// function add(a,b) {
+//     return a+=b;
+// }
+// console.log(add(2,3))
+
+// to find Max number 
+function maxNumber(a,b,c) {
+    return Math.max(a,b,c)
+}
+
+console.log(maxNumber(3,5,9))
+
+
+let now = new Date()
+console.log(now.toISOString())
+console.log(now.toDateString())
+console.log(now.toLocaleString())
+
+
+let randomNumber = Math.floor(Math.random() * 90) + 10;
+console.log(randomNumber);
+
+//let x = "sixteen"+16
+//let x = 123e2
+// let x = 123e-3
+// console.log(x)
+
+let tell = {
+    name: "dinesh",
+    age: 21,
+    time: "2135"
+}
+//to add
+tell.work = "js"
+//to Delete
+delete tell.time
+
+console.log(tell)
+
+const person = {
+    name: "John",
+    age: 30,
+    city: "New York"
+  };
+  
+  // Create an Array
+  const arry = Object.values(person)
+  let myString = JSON.stringify(person);
+console.log(myString)
+
+
+let person1 = {
+    firstName: 'Dinesh',
+    lastName: 'Reddypogu'
+}
+const person2 = {
+    firstName: 'Ceaser',
+    lastName: 'Reddypogu'
+}
+const totalName = {
+    fullName : function (city, country) {
+        return this.firstName+ " " + this.lastName +  ", " + city + ", " + country;;
+    }
+}
+  //function call
+  console.log(totalName.fullName.call(person1, "HYD","India"))
+
+  //apply() take arguments as an array.
+//console.dir(person.fullName.apply(person2, ["HYD","India"]))
+
+
+function factonail(n) {
+    if (n===0 || n===1) {
+        return 1
+    }
+    return n * factonail(n-1)
+}
+
+//console.log(factonail(5))
+
+
+
+function construction(name,last , age, time) {
+    this.firstName = name,
+    this.lastName = last,
+    this.lifeage = age
+    this.time = time,
+    this.fullName = function () {
+        return this.firstName+ " " + this.lastName
+    }
+  }
+
+const data = new construction("John", "Doe", 50, 2024);
+console.log(data.fullName())
+
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+console.log(fruits.at(-2))
+
+const myArr = [1, 2, 3, 4, 5, 6];
+const newArr = myArr.flatMap(x => [x, x * 5]);
+console.log(newArr)
+
+const arr = [[1,2],[3,4],[5,6]];
+const newarry = arr.flat();
+console.log(newarry)
+
+let name = 'Dinesh'   
+let missing = "Missing"
+let final = name ?? missing
+
+// Nullish Coalescing Operator
+let result = `This name was ${final}`
+console.log(result)
+
+const car = {type:"Fiat", model:"500", color:"white"};
+console.log(car.name)
+
+
+let day 
+switch (new Date().getDay()) {
+    case 0:
+      day = "Sunday";
+      break;
+    case 1:
+      day = "Monday";
+      break;
+    case 2:
+       day = "Tuesday";
+      break;
+    case 3:
+      day = "Wednesday";
+      break;
+    case 4:
+      day = "Thursday";
+      break;
+    case 5:
+      day = "Friday";
+      break;
+    case 6:
+      day = "Saturday";
+  }
+
+console.log(day)
+
+const maps = new Map([
+    ["apples", 500],
+    ["bananas", 300],
+    ["oranges", 200]
+  ]);
+  
+  // List all entries
+  let text = " ";
+  for (const x of maps) {
+    text += x + " ";
+  }
+
+  console.log(text)
+
+  //set()
+const useSet = new Set();
+
+let f = "a"
+
+// limitations only one them goes to array varibles or assinged values
+useSet.add(f)
+useSet.add("a")
+
+console.log(useSet)
+
+let two = "2"
+// console.log(typeof(two))
+// console.log(typeof(parseInt(two)))
+// console.log(typeof(Number(two)))
+
+let regExp = "Visit W3Schools";
+console.log(regExp.search(/w3schools/i));
+
+// "use strict";
+// let x = "010";   
+// console.log(x)
+
+class Product {
+    constructor(item, price) {
+        this.item = item;
+        this.price = price;
+    }
+    displayItem(){
+        console.log(`product: ${this.item}`)
+        console.log(`price: ${this.price}`)
+    }
+
+}
+
+let product1 = new Product("shirt", 2999);
+let product2 = new Product("pant", 1999);
+let product13 = new Product("Shoe", 6999);
+
+product13.displayItem()
+
+// Create Target Object
+// const person1 = {
+//     firstName: "John",
+//     lastName: "Doe",
+//     age: 50,
+//     eyeColor: "blue"
+//   };
+  
+//   // Create Source Object
+//   const person2 = {firstName: "Anne",lastName: "Smith"};
+
+//   const person = {
+//     firstName: "John",
+//     lastName: "Doe",
+//     age: 50,
+//     eyeColor: "blue"
+//   };
+  
+//   // Assign Source to Target
+// console.log( Object.assign(person1, person2))
+
+// let text = Object.entries(person);
+// console.log(text)
+
+const cal = {
+    add: function (a,b) {
+        return a+b;
+    },
+    sub: function (a,b) {
+        return a-b;
+    },
+    mul: function (a,b) {
+        return a*b;
+    },
+}
+
+console.log(cal.add(2,3))
