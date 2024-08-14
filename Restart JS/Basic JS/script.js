@@ -501,3 +501,61 @@ const cal = {
 }
 
 console.log(cal.add(2,3))
+
+
+// const person = {
+//     firstName: "John",
+//     lastName: "Doe",
+//     language: "English",
+//     get lang() {
+//       return this.language.toUpperCase();
+//     }
+//     // set lang(lang) {
+//     //     this.language = lang
+//     // }
+//   };
+
+// //   let result = person.lang = "Telugu"
+
+//   console.log(person.lang)
+
+// const fruits = ["Banana", "Orange", "Apple", "Mango"];
+// Object.preventExtensions(fruits);
+// Object.seal(fruits)
+
+// console.log(Object.isSealed(fruits))
+
+// console.log(fruits.pop())
+console.log(fruits)
+
+// function sum(...args) {
+//     let sum = 0;
+//     for (arg of args) sum += arg;
+//     return sum;
+//   }
+  
+//   let x = sum(1,1);
+//   console.log(x)
+
+
+
+// class Car {
+//     constructor(name) {
+//       this.name = name;
+//     }
+//     static hello(x) {
+//       return "Hello " + x.name;
+//     }
+//   }
+//   const myCar = new Car("Ford");
+
+//   console.log(Car.hello(myCar))\
+
+
+const reeuse =  setInterval(myFunction, 1000);
+
+function myFunction() {
+  let d = new Date();
+  console.log(`Hour : ${d.getHours()} || Minutes : ${d.getMinutes()} || Seconds : ${d.getSeconds()} <br>` )
+}
+
